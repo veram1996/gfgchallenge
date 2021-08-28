@@ -1,5 +1,5 @@
 //
-//  HTTPMethodType.swift
+//  ServiceManager.swift
 //  iOS_Challenge
 //
 //  Created by Dheeraj Verma on 27/08/21.

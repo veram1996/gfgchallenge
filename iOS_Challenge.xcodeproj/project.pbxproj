@@ -32,6 +32,7 @@
 		1C8CD3B126DA2174007A7E43 /* ProgressIndicatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CD3B026DA2173007A7E43 /* ProgressIndicatorHelper.swift */; };
 		1C8CD3B426DA2635007A7E43 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CD3B326DA2635007A7E43 /* UITableViewCell+Extension.swift */; };
 		1C8CD3B626DA2DFE007A7E43 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CD3B526DA2DFE007A7E43 /* Date+Extension.swift */; };
+		1C8CD3B826DA3326007A7E43 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CD3B726DA3326007A7E43 /* StringConstants.swift */; };
 		E094563609E58BEF68CFFF8E /* Pods_iOS_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD004CA21A18413D5F45AC1 /* Pods_iOS_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		1C8CD3B026DA2173007A7E43 /* ProgressIndicatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorHelper.swift; sourceTree = "<group>"; };
 		1C8CD3B326DA2635007A7E43 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		1C8CD3B526DA2DFE007A7E43 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		1C8CD3B726DA3326007A7E43 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		3300BA678F594D4E6985A202 /* Pods-iOS_Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Challenge.release.xcconfig"; path = "Target Support Files/Pods-iOS_Challenge/Pods-iOS_Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		4DD004CA21A18413D5F45AC1 /* Pods_iOS_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BB2C68FB0E4419B41CEFA4 /* Pods-iOS_Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Challenge.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Challenge/Pods-iOS_Challenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				1C58834C26D945B00085C5FF /* LocalizableString.swift */,
 				1C58834F26D945FC0085C5FF /* Localizable.strings */,
+				1C8CD3B726DA3326007A7E43 /* StringConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				1C58834B26D943F20085C5FF /* ErrorResponse.swift in Sources */,
 				1C58835526D94A5A0085C5FF /* NewsItemTableViewCell.swift in Sources */,
 				1C58834226D942B60085C5FF /* News.swift in Sources */,
+				1C8CD3B826DA3326007A7E43 /* StringConstants.swift in Sources */,
 				1C58832326D940480085C5FF /* SceneDelegate.swift in Sources */,
 				1C8CD3AD26DA0B54007A7E43 /* TopNewsTableViewCell.swift in Sources */,
 				1C8CD3B626DA2DFE007A7E43 /* Date+Extension.swift in Sources */,

@@ -25,7 +25,7 @@ class NewsListViewModel {
     func getNewsList(success: (() -> Void)?, error: ((_ error: ErrorResponse) -> Void)?) {
         self.success = success
         self.error = error
-        serviceManager?.requestGETWithURL("https://api.rss2json.com/v1/api.json?rss_url=http://www.abc.net.au/news/feed/51120/rss.xml", returningClass: News.self)
+        serviceManager?.requestGETWithURL(StringConstants.url, returningClass: News.self)
         
     }
 }

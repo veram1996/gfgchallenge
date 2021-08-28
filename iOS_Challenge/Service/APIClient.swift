@@ -61,7 +61,7 @@ extension APIClient {
         do {
             return try decoder.decode(responseType, from: data)
         } catch let error {
-            debugPrint("deocding error =>\(error.localizedDescription)")
+            debugPrint("decoding error =>\(error.localizedDescription)")
         }
         return nil
     }
