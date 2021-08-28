@@ -17,8 +17,8 @@ class TopNewsTableViewCell: UITableViewCell {
     func configCell(item: Items) {
         newItemBackgroundView.layer.cornerRadius = 20
         newsTitleLabel.text = item.title
-        newsDateLabel.text =  item.pubDate
-        guard let stringUrl = item.thumbnail, stringUrl != "" else { return }
+        newsDateLabel.text =  Date.getDateString(item.pubDate!)
+        guard let stringUrl = item.enclosure?.link, stringUrl != "" else { return }
         let url = URL(string: stringUrl)
         newsImageView.kf.setImage(
             with: url,

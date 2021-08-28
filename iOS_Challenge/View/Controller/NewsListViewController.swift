@@ -12,7 +12,7 @@ class NewsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var newsListViewModel: NewsListViewModel?
-    
+    private let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(NewsItemTableViewCell.nib(), forCellReuseIdentifier: "NewsItemTableViewCell")
@@ -20,15 +20,24 @@ class NewsListViewController: UIViewController {
         newsListViewModel = NewsListViewModel()
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        addPullToRefresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getNewsList()
+    }
+    
+    private func addPullToRefresh() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+        refreshControl.endRefreshing()
+        getNewsList()
+     
     }
     
     private func getNewsList() {

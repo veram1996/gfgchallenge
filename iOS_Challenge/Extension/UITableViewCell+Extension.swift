@@ -12,4 +12,8 @@ extension UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
+    
+    static var reuseIdentifier: String {
+        return String(describing: self.classForCoder)
+    }
 }
