@@ -36,8 +36,8 @@ class ServiceManager {
                 self.responseWrapper(returningClass: returningClass, result: result)
             }
         } else {
-            let error = ErrorResponse(code: 503, message: ErrorString.pleaseCheckInternetConnection.text(), error: "No Internet")
-            apiResponseReceiver?.onDetailError(error)
+            let errorResponse = ErrorResponse(code: 503, message: ErrorString.pleaseCheckInternetConnection.text(), error: "No Internet")
+            apiResponseReceiver?.onDetailError(errorResponse)
         }
     }
 }
@@ -49,15 +49,13 @@ extension ServiceManager {
         switch result {
         case .success(let success):
             if let data = success {
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
+                DispatchQueue.main.async {
                     self.apiResponseReceiver?.onSuccess(data)
                 }
             }
             
         case .failure(let error):
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
+            DispatchQueue.main.async {
                 self.apiResponseReceiver?.onDetailError(error)
             }
         }

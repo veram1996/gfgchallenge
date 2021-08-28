@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,19 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hg6-JA-dGz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" red="0.94109404090000004" green="0.94122928380000004" blue="0.9410645366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hg6-JA-dGz">
+                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmW-vR-35V" userLabel="safeArea">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDn-VG-CPi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeeksForGeeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gey-mS-GKj">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="20"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="SzQ-c1-KyX"/>
+                                    <constraint firstItem="gey-mS-GKj" firstAttribute="leading" secondItem="TDn-VG-CPi" secondAttribute="leading" constant="20" id="XeW-AI-Rlt"/>
+                                    <constraint firstItem="gey-mS-GKj" firstAttribute="top" secondItem="TDn-VG-CPi" secondAttribute="top" id="bpa-LY-2r2"/>
+                                    <constraint firstItem="gey-mS-GKj" firstAttribute="centerY" secondItem="TDn-VG-CPi" secondAttribute="centerY" id="qNC-ml-NAg"/>
+                                    <constraint firstAttribute="trailing" secondItem="gey-mS-GKj" secondAttribute="trailing" constant="20" symbolic="YES" id="yhn-ue-zjK"/>
+                                    <constraint firstAttribute="bottom" secondItem="gey-mS-GKj" secondAttribute="bottom" id="zPq-y5-FSh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94109404090000004" green="0.94122928380000004" blue="0.9410645366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TDn-VG-CPi" secondAttribute="trailing" id="1JG-mP-jhE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DmW-vR-35V" secondAttribute="trailing" id="Bk6-cE-7Hf"/>
+                            <constraint firstItem="TDn-VG-CPi" firstAttribute="top" secondItem="DmW-vR-35V" secondAttribute="bottom" id="DE3-L9-371"/>
+                            <constraint firstItem="TDn-VG-CPi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Onc-lf-tSm"/>
                             <constraint firstAttribute="bottom" secondItem="hg6-JA-dGz" secondAttribute="bottom" id="PEz-jz-RYv"/>
-                            <constraint firstItem="hg6-JA-dGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dEN-oj-3u0"/>
+                            <constraint firstItem="DmW-vR-35V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cSP-tj-RP5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="DmW-vR-35V" secondAttribute="bottom" id="e8q-co-7aE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hg6-JA-dGz" secondAttribute="trailing" id="gXl-5V-Ksr"/>
                             <constraint firstItem="hg6-JA-dGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tii-4P-6FD"/>
+                            <constraint firstItem="hg6-JA-dGz" firstAttribute="top" secondItem="TDn-VG-CPi" secondAttribute="bottom" constant="15" id="vb4-H3-77K"/>
+                            <constraint firstItem="DmW-vR-35V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xzG-Ty-vOr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -37,10 +68,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="72"/>
+            <point key="canvasLocation" x="95.652173913043484" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="textColor">
+            <color red="0.36862745098039218" green="0.50196078431372548" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

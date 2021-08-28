@@ -15,26 +15,21 @@ class NewsItemTableViewCell: UITableViewCell {
     @IBOutlet weak var newsDateLabel: UILabel!
     @IBOutlet weak var newItemBackgroundView: UIView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configCell(item: Items) {
         newItemBackgroundView.layer.cornerRadius = 10
         newsTitleLabel.text = item.title
         newsDateLabel.text =  item.pubDate
         guard let stringUrl = item.thumbnail, stringUrl != "" else { return }
         let url = URL(string: stringUrl)
+        
         newsImageView.kf.setImage(
             with: url,
-            placeholder: UIImage(named: "gfgImage"),
+            placeholder: UIImage(named: "imageplaceholder"),
             options: [
-                    .loadDiskFileSynchronously,
-                    .cacheOriginalImage,
-                    .transition(.fade(0.25)),
+                .loadDiskFileSynchronously,
+                .cacheOriginalImage,
+                .transition(.fade(0.25)),
             ]
         )
     }
-    
 }

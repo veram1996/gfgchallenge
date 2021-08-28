@@ -8,16 +8,26 @@
 import UIKit
 
 class TopNewsTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsTitleLabel: UILabel!
+    @IBOutlet weak var newsDateLabel: UILabel!
+    @IBOutlet weak var newItemBackgroundView: UIView!
+ 
+    func configCell(item: Items) {
+        newItemBackgroundView.layer.cornerRadius = 20
+        newsTitleLabel.text = item.title
+        newsDateLabel.text =  item.pubDate
+        guard let stringUrl = item.thumbnail, stringUrl != "" else { return }
+        let url = URL(string: stringUrl)
+        newsImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "imageplaceholder"),
+            options: [
+                    .cacheOriginalImage,
+                    .transition(.fade(0.25)),
+            ]
+        )
     }
     
 }

@@ -9,8 +9,8 @@ import Foundation
 
 class NewsListViewModel {
     private var serviceManager: ServiceManager?
-    var success: (() -> Void)?
-    var error: ((_ error: ErrorResponse) -> Void)?
+    private var success: (() -> Void)?
+    private var error: ((_ error: ErrorResponse) -> Void)?
     
     var news: News? {
         didSet {
@@ -21,8 +21,10 @@ class NewsListViewModel {
     init() {
         serviceManager = ServiceManager(delegate: self)
     }
-   
-    func getNewsList() {
+    
+    func getNewsList(success: (() -> Void)?, error: ((_ error: ErrorResponse) -> Void)?) {
+        self.success = success
+        self.error = error
         serviceManager?.requestGETWithURL("https://api.rss2json.com/v1/api.json?rss_url=http://www.abc.net.au/news/feed/51120/rss.xml", returningClass: News.self)
         
     }
