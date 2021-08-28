@@ -37,7 +37,7 @@ class NewsListViewController: UIViewController {
     @objc private func refresh(_ sender: AnyObject) {
         refreshControl.endRefreshing()
         getNewsList()
-     
+        
     }
     
     private func getNewsList() {
@@ -51,7 +51,7 @@ class NewsListViewController: UIViewController {
         }, error: { [weak self] response in
             guard let self = self else { return }
             ProgressIndicatorHelper.sharedInstance.hide()
-            self.showAlert(title: response.error ?? "Error", errorMessage: response.message ?? "Something went wrong")
+            self.showAlert(title: response.error ?? "", errorMessage: response.message ?? "")
         })
     }
     
