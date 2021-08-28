@@ -86,7 +86,7 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 460
+            return 475
         } else {
             return 140
         }
